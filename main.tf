@@ -14,6 +14,14 @@ module "my_dev_app" {
 	instance_name = "my-module-name"
 }
 
+module "my_staging_app" {
+        source = "./my_module"
+        env = "staging"
+        instance_type = "t2.micro"
+        ami = "ami-0e83be366243f524a"
+        instance_name = "my-module-name"
+}
+
 module "my_prd_app" {
         source = "./my_module"
         env = "prd"
